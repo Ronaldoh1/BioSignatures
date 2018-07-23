@@ -16,6 +16,26 @@ class SignatureViewController: UIViewController {
         signatureView.backgroundColor = .white
         return signatureView
     }()
+    
+    private let bigXImageView: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "bigX"))
+        return imageView
+    }()
+    
+    private let signatureLine: UIView = {
+        let view = UIView()
+        view.backgroundColor = .darkGray
+        return view
+    }()
+    
+    private let disclosureLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 13)
+        label.textColor = .darkGray
+        label.textAlignment = .center
+        label.text = "Sign your name using your finger"
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +57,9 @@ class SignatureViewController: UIViewController {
     
     private func setupViews() {
         view.addSubview(signatureView)
+        view.addSubview(signatureLine)
+        view.addSubview(bigXImageView)
+        view.addSubview(disclosureLabel)
     }
     
     
@@ -46,6 +69,24 @@ class SignatureViewController: UIViewController {
             make.top.equalToSuperview()
             make.right.equalToSuperview()
             make.bottom.equalToSuperview()
+        }
+        
+        bigXImageView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(25)
+            make.bottom.equalToSuperview().offset(-60)
+        }
+        
+        signatureLine.snp.makeConstraints { (make) in
+            make.left.equalTo(bigXImageView.snp.left).offset(-10)
+            make.right.equalToSuperview().offset(25)
+            make.bottom.equalTo(bigXImageView.snp.bottom).offset(10)
+            make.height.equalTo(2)
+        }
+        
+        disclosureLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(signatureLine.snp.left)
+            make.right.equalTo(signatureLine.snp.right)
+            make.top.equalTo(signatureLine.snp.top).offset(5)
         }
     }
 
