@@ -7,29 +7,47 @@
 //
 
 import UIKit
+import SnapKit
 
 class SignatureViewController: UIViewController {
+    
+    private let signatureView: YPDrawSignatureView = {
+        let signatureView = YPDrawSignatureView(frame: .zero)
+        signatureView.backgroundColor = .white
+        return signatureView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViews()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        guard traitCollection != previousTraitCollection else { return }
+        
+        switch traitCollection.verticalSizeClass {
+        case .compact: setupCompactConstraints()
+        default: break
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func setupViews() {
+        view.addSubview(signatureView)
     }
-    */
+    
+    
+    private func setupCompactConstraints() {
+        signatureView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview()
+            make.top.equalToSuperview()
+            make.right.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+    }
+
 
 }
