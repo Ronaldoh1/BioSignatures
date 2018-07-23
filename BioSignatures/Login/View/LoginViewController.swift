@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     }
     
     private lazy var emailTextField: UITextField = {
-        
+        let textfield = 
         
     }()
     
@@ -35,12 +35,13 @@ class LoginViewController: UIViewController {
         
     }()
     
-    private lazy var addSignatureButton = {
-        
+    private lazy var addSignatureButton: UIButton = {
+        let button = UIButton.self
+        return button
     }()
     
-    private lazy var createAccount = {
-        
+    private lazy var createAccountButton: UIButton = {
+        let
     }()
 
     override func viewDidLoad() {
