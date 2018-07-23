@@ -49,7 +49,17 @@ extension AppDelegate: UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if let navigationController = self.window?.rootViewController as? UINavigationController {
+            if navigationController.visibleViewController is SignatureViewController {
+                return UIInterfaceOrientationMask.landscape
+            } else {
+                return UIInterfaceOrientationMask.portrait
+            }
+        }
+        return UIInterfaceOrientationMask.portrait
+    }
     
     //MARK: - Private methods
     
