@@ -42,7 +42,8 @@ class LoginViewController: UIViewController {
     
     private lazy var textFieldStackView: UIStackView = {
         var stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField])
-        stackView.axis = .horizontal
+        stackView.axis = .vertical
+        stackView.spacing = 10
         stackView.alignment = .center
         return stackView
     } ()
@@ -60,7 +61,8 @@ class LoginViewController: UIViewController {
     
     private lazy var addFaceStackView: UIStackView = {
         var stackView = UIStackView(arrangedSubviews: [toggle, toggleLabel])
-        stackView.axis = .vertical
+        stackView.axis = .horizontal
+        stackView.spacing = 10
         stackView.alignment = .center
         return stackView
     } ()
@@ -79,9 +81,10 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var mainStackview: UIStackView = {
-        var stackView = UIStackView(arrangedSubviews: [textFieldStackView, addFaceStackView, addSignatureButton])
-        stackView.axis = .horizontal
+        var stackView = UIStackView(arrangedSubviews: [textFieldStackView, addFaceStackView, addSignatureButton ])
+        stackView.axis = .vertical
         stackView.alignment = .center
+        stackView.spacing = 10
         return stackView
     } ()
     
@@ -93,6 +96,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
         setupViews()
     }
     
@@ -133,7 +137,7 @@ class LoginViewController: UIViewController {
         mainStackview.snp.remakeConstraints {
             $0.left.equalTo(view.snp.leftMargin)
             $0.right.equalTo(view.snp.rightMargin)
-            $0.centerY.equalTo(view.snp.centerY)
+            $0.centerY.equalTo(view.snp.topMargin)
         }
         
         createAccountButton.snp.remakeConstraints {
