@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [toggle, toggleLabel])
         stackView.axis = .horizontal
         stackView.spacing = 10
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fill
         return stackView
     } ()
     
@@ -73,6 +73,7 @@ class LoginViewController: UIViewController {
         var button = UIButton()
         button.backgroundColor = UIColor.blue
         button.addTarget(self, action: #selector(addIndividualSignature), for: .touchUpInside)
+        button.tintColor = UIColor.white
         button.titleLabel?.text = "Add Signature"
         return button
     }()
@@ -99,6 +100,14 @@ class LoginViewController: UIViewController {
         button.titleLabel?.text = "Create Account"
         return button
     }()
+    
+    private lazy var createAccountStack: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [createAccountButton])
+        stackView.alignment = .center
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        return stackView
+    } ()
 
     override func viewDidLoad() {
         super.viewDidLoad()

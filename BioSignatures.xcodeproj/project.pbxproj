@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E6D91C22106650A005A7E10 /* MCErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */; };
+		0E6D91C42106735D005A7E10 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */; };
 		FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18E821061636001F1F32 /* AppDelegate.swift */; };
 		FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18EA21061636001F1F32 /* LoginViewController.swift */; };
 		FAEE18F021061639001F1F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEE18EF21061639001F1F32 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCErrorTextField.swift; sourceTree = "<group>"; };
+		0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
 		FAEE18E521061636001F1F32 /* BioSignatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioSignatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEE18E821061636001F1F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEE18EA21061636001F1F32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				FAEE18EA21061636001F1F32 /* LoginViewController.swift */,
 				0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */,
+				0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */,
 				0E6D91C22106650A005A7E10 /* MCErrorTextField.swift in Sources */,
 				FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */,
+				0E6D91C42106735D005A7E10 /* DocumentTableViewCell.swift in Sources */,
 				FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,7 +598,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.TeamBio.BioSignatures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -615,7 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.TeamBio.BioSignatures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
