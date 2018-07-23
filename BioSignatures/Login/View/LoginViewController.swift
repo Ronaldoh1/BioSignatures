@@ -12,6 +12,36 @@ import Material
 class LoginViewController: UIViewController {
     
     var presenter: LoginPresenterType?
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    private lazy var emailTextField: UITextField = {
+        
+        
+    }()
+    
+    private lazy var passwordTextField: UITextField = {
+        
+        
+    }()
+    
+    private lazy var toggle: UISwitch = {
+        
+    }()
+    
+    private lazy var toggleLabel: UILabel = {
+        
+    }()
+    
+    private lazy var addSignatureButton = {
+        
+    }()
+    
+    private lazy var createAccount = {
+        
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +55,8 @@ class LoginViewController: UIViewController {
     private func setupViews() {
         
     }
+    
+    
 
  
     //MARK: Set up views
