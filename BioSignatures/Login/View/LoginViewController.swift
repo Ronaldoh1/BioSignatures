@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
         return false
     }
     
-    private lazy var emailTextField: UITextField = {
-        let textfield = UITextField()
+    private lazy var emailTextField: MCErrorTextField = {
+        let textfield = MCErrorTextField()
         let emailIcon = UIImageView(image: #imageLiteral(resourceName: "envelope"))
         textfield.leftView = emailIcon
         textfield.leftViewMode = .always
@@ -29,8 +29,8 @@ class LoginViewController: UIViewController {
         return textfield
     }()
     
-    private lazy var passwordTextField: UITextField = {
-        let textfield = UITextField()
+    private lazy var passwordTextField: MCErrorTextField = {
+        let textfield = MCErrorTextField()
         let passwordIcon = UIImageView(image: #imageLiteral(resourceName: "key"))
         textfield.leftView = passwordIcon
         textfield.leftViewMode = .always
@@ -41,10 +41,10 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var textFieldStackView: UIStackView = {
-        var stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField])
+        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField])
         stackView.axis = .vertical
         stackView.spacing = 10
-        stackView.alignment = .center
+        stackView.distribution = .fillEqually
         return stackView
     } ()
     
@@ -54,53 +54,63 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var toggleLabel: UILabel = {
-        var label = UILabel()
+        let label = UILabel()
         label.text = "Add Face ID"
         return label
     }()
     
     private lazy var addFaceStackView: UIStackView = {
-        var stackView = UIStackView(arrangedSubviews: [toggle, toggleLabel])
+        let stackView = UIStackView(arrangedSubviews: [toggle, toggleLabel])
         stackView.axis = .horizontal
         stackView.spacing = 10
-        stackView.alignment = .center
+        stackView.distribution = .fillEqually
         return stackView
     } ()
     
     private lazy var signatureImageView: UIImageView = {
-        var signatureImgV = UIImageView()
+        let signatureImgV = UIImageView()
         signatureImgV.isHidden = true
         return signatureImgV
     }()
     
     private lazy var addSignatureButton: UIButton = {
         var button = UIButton()
+        button.backgroundColor = UIColor.blue
         button.addTarget(self, action: #selector(addIndividualSignature), for: .touchUpInside)
         button.titleLabel?.text = "Add Signature"
         return button
     }()
     
-    private lazy var mainStackview: UIStackView = {
-        var stackView = UIStackView(arrangedSubviews: [textFieldStackView, addFaceStackView, addSignatureButton ])
-        stackView.axis = .vertical
+    private lazy var buttonStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [addSignatureButton])
         stackView.alignment = .center
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        return stackView
+    } ()
+    
+    private lazy var mainStackview: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [textFieldStackView, addFaceStackView, buttonStackView])
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
         stackView.spacing = 10
         return stackView
     } ()
     
     private lazy var createAccountButton: UIButton = {
-        var button = UIButton()
+        let button = UIButton()
+        button.backgroundColor = UIColor.blue
         button.titleLabel?.text = "Create Account"
         return button
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
         setupViews()
     }
     
     private func setupViews() {
+        view.backgroundColor = UIColor.white
         view.addSubview(mainStackview)
         view.addSubview(createAccountButton)
     }
@@ -130,22 +140,17 @@ class LoginViewController: UIViewController {
     
     private func setupRegularConstraints() {
         
-        addFaceStackView.snp.remakeConstraints {
-            $0.left.equalTo(mainStackview.snp.left)
-        }
-
-        mainStackview.snp.remakeConstraints {
+        mainStackview.snp.makeConstraints {
             $0.left.equalTo(view.snp.leftMargin)
             $0.right.equalTo(view.snp.rightMargin)
-            $0.centerY.equalTo(view.snp.topMargin)
+            $0.top.equalTo(view.snp.topMargin)
         }
         
-        createAccountButton.snp.remakeConstraints {
+        createAccountButton.snp.makeConstraints {
                 $0.centerX.equalToSuperview()
                 $0.bottom.equalTo(view.snp.bottomMargin)
             }
         }
-
 }
 
 extension LoginViewController: LoginViewType {
