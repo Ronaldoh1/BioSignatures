@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var mainStackview: UIStackView = {
-        var stackView = UIStackView(arrangedSubviews: [textFieldStackView, signatureImageView, addSignatureButton])
+        var stackView = UIStackView(arrangedSubviews: [textFieldStackView, addFaceStackView, addSignatureButton])
         stackView.axis = .horizontal
         stackView.alignment = .center
         return stackView
@@ -126,9 +126,21 @@ class LoginViewController: UIViewController {
     
     private func setupRegularConstraints() {
         
+        addFaceStackView.snp.remakeConstraints {
+            $0.left.equalTo(mainStackview.snp.left)
+        }
+
+        mainStackview.snp.remakeConstraints {
+            $0.left.equalTo(view.snp.leftMargin)
+            $0.right.equalTo(view.snp.rightMargin)
+            $0.centerY.equalTo(view.snp.centerY)
+        }
         
-        
-    }
+        createAccountButton.snp.remakeConstraints {
+                $0.centerX.equalToSuperview()
+                $0.bottom.equalTo(view.snp.bottomMargin)
+            }
+        }
 
 }
 
