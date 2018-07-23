@@ -23,8 +23,6 @@ class LoginViewController: UIViewController {
         let emailIcon = UIImageView(image: #imageLiteral(resourceName: "envelope"))
         textfield.leftView = emailIcon
         textfield.leftViewMode = .always
-        textfield.dividerContentEdgeInsets.left = .leastNonzeroMagnitude
-        textfield.dividerThickness = 1.0
         textfield.placeholder = "Email"
         return textfield
     }()
@@ -34,8 +32,6 @@ class LoginViewController: UIViewController {
         let passwordIcon = UIImageView(image: #imageLiteral(resourceName: "key"))
         textfield.leftView = passwordIcon
         textfield.leftViewMode = .always
-        textfield.dividerContentEdgeInsets.left = .leastNonzeroMagnitude
-        textfield.dividerThickness = 1.0
         textfield.placeholder = "Password"
         return textfield
     }()
