@@ -23,7 +23,7 @@ extension LoginRouter: LoginRouterType {
     
     func presentLoginViewController(in windwow: UIWindow) {
         guard let controller = container.resolve(LoginViewType.self) as? LoginViewController else { return }        
-        let rootViewController = UINavigationController(rootViewController: controller)
+        let rootViewController = UINavigationController(rootViewController: SignatureViewController())
         rootViewController.navigationBar.isHidden = true
 
         windwow.makeKeyAndVisible()

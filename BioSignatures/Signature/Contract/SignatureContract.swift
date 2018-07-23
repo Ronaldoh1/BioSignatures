@@ -6,4 +6,29 @@
 //  Copyright © 2018 Team Bio. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol SignatureViewType: class {
+    
+    var presenter: SignaturePresenterType? { get set }
+    
+}
+
+protocol SignatureInteractorType: class {
+    
+    
+}
+
+protocol SignaturePresenterType: class {
+    
+    func viewDidAppear()
+    func signUp(email: String, password: String)
+    
+    
+}
+
+protocol SignatureRouterType: class {
+    
+    func presentSignatureViewController(sender: UIViewController)
+    
+}

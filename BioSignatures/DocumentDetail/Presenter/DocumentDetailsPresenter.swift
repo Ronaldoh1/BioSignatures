@@ -7,3 +7,29 @@
 //
 
 import Foundation
+
+class  DocumentDetailsPresenter: NSObject {
+    
+    private weak var view:  DocumentDetailsViewType?
+    private let router:  DocumentDetailsRouterType?
+    private let interactor:  DocumentDetailsInteractorType?
+    
+    required init(view:  DocumentDetailsViewType, router:  DocumentDetailsRouterType, interactor:  DocumentDetailsInteractorType) {
+        self.view = view
+        self.router = router
+        self.interactor = interactor
+    }
+    
+}
+
+extension  DocumentDetailsPresenter:  DocumentDetailsPresenterType {
+    
+    func viewDidAppear() {
+        
+    }
+    
+    func signUp(email: String, password: String) {
+        
+    }
+    
+}

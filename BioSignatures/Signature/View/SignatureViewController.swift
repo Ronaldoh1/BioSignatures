@@ -11,6 +11,8 @@ import SnapKit
 
 class SignatureViewController: UIViewController {
     
+    var presenter: SignaturePresenterType?
+    
     private let signatureView: YPDrawSignatureView = {
         let signatureView = YPDrawSignatureView(frame: .zero)
         signatureView.backgroundColor = .white
@@ -91,4 +93,9 @@ class SignatureViewController: UIViewController {
     }
 
 
+}
+
+extension SignatureViewController: SignatureViewType {
+    
+    
 }

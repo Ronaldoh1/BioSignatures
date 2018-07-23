@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FADA89AF21066B1F00EF63DD /* DocumentDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */; };
 		FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18E821061636001F1F32 /* AppDelegate.swift */; };
 		FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18EA21061636001F1F32 /* LoginViewController.swift */; };
 		FAEE18F021061639001F1F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEE18EF21061639001F1F32 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		FAEE196A21064834001F1F32 /* DocumentDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196921064834001F1F32 /* DocumentDetailsAssembly.swift */; };
 		FAEE196C21064B10001F1F32 /* YPDrawSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196B21064B10001F1F32 /* YPDrawSignatureView.swift */; };
 		FAEE196E21064C6D001F1F32 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196D21064C6D001F1F32 /* SignatureViewController.swift */; };
+		FAEE1971210667F8001F1F32 /* DocumentListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1970210667F8001F1F32 /* DocumentListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsInteractor.swift; sourceTree = "<group>"; };
 		FAEE18E521061636001F1F32 /* BioSignatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioSignatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEE18E821061636001F1F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEE18EA21061636001F1F32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		FAEE196921064834001F1F32 /* DocumentDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsAssembly.swift; sourceTree = "<group>"; };
 		FAEE196B21064B10001F1F32 /* YPDrawSignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPDrawSignatureView.swift; sourceTree = "<group>"; };
 		FAEE196D21064C6D001F1F32 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
+		FAEE1970210667F8001F1F32 /* DocumentListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FADA89AD21066AE100EF63DD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		FAEE18DC21061636001F1F32 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +231,7 @@
 				FAEE1940210644EE001F1F32 /* Contract */,
 				FAEE19442106452B001F1F32 /* Entity */,
 				FAEE194321064502001F1F32 /* Interactor */,
+				FAEE196F210667CA001F1F32 /* Presenter */,
 				FAEE1941210644F4001F1F32 /* Router */,
 				FAEE1942210644FD001F1F32 /* View */,
 			);
@@ -231,6 +244,7 @@
 				FAEE19682106481F001F1F32 /* Assembly */,
 				FAEE19472106454C001F1F32 /* Contract */,
 				FAEE194621064548001F1F32 /* Entity */,
+				FADA89AD21066AE100EF63DD /* Interactor */,
 				FAEE194B21064577001F1F32 /* Presenter */,
 				FAEE19492106455D001F1F32 /* Router */,
 				FAEE194821064559001F1F32 /* View */,
@@ -455,6 +469,14 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		FAEE196F210667CA001F1F32 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE1970210667F8001F1F32 /* DocumentListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -609,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEE1971210667F8001F1F32 /* DocumentListPresenter.swift in Sources */,
 				FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */,
 				FAEE196721064817001F1F32 /* DocumentDetailsContract.swift in Sources */,
 				FAEE195521064739001F1F32 /* SignatureAssembly.swift in Sources */,
@@ -622,6 +645,7 @@
 				FAEE195321064729001F1F32 /* SignatureInteractor.swift in Sources */,
 				FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */,
 				FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */,
+				FADA89AF21066B1F00EF63DD /* DocumentDetailsInteractor.swift in Sources */,
 				FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */,
 				FAEE194D2106468C001F1F32 /* SignatureRouter.swift in Sources */,
 				FAEE196521064807001F1F32 /* DocumentDetailsPresenter.swift in Sources */,

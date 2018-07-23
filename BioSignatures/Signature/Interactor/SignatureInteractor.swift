@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class SignatureInteractor {
+    
+    
+}
+
+extension SignatureInteractor: SignatureInteractorType {
+    
+}
+
