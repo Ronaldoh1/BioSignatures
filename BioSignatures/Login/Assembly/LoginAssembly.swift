@@ -21,7 +21,6 @@ class LoginAssembly: Assembly {
                 view.presenter = resolver.resolve(LoginPresenterType.self)!
         }
 
-        
         container.register(LoginPresenterType.self) { (resolver) in
             let view = resolver.resolve(LoginViewType.self)!
             let router = resolver.resolve(LoginRouterType.self)!

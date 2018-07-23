@@ -18,13 +18,32 @@ class LoginViewController: UIViewController {
         
         view.backgroundColor = .red
         
+        setupViews()
+    }
+    
+    private func setupViews() {
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+ 
+    //MARK: Set up views
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        guard traitCollection != previousTraitCollection else { return }
+        
+        switch traitCollection.verticalSizeClass {
+        case .regular: setupRegularConstraints()
+        default: break
+        }
+        
     }
-
+    
+    
+    private func setupRegularConstraints() {
+        
+    }
 
 }
 
