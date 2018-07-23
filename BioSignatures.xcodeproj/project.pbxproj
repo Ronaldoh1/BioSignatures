@@ -23,7 +23,6 @@
 		FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE193121063256001F1F32 /* LoginAssembly.swift */; };
 		FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1933210632AB001F1F32 /* LoginPresenter.swift */; };
 		FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE193521063363001F1F32 /* LoginInteractor.swift */; };
-		FAEE1938210644A4001F1F32 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1937210644A4001F1F32 /* SignatureViewController.swift */; };
 		FAEE194D2106468C001F1F32 /* SignatureRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE194C2106468C001F1F32 /* SignatureRouter.swift */; };
 		FAEE194F21064698001F1F32 /* SignaturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE194E21064698001F1F32 /* SignaturePresenter.swift */; };
 		FAEE1951210646F1001F1F32 /* SignatureContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1950210646F1001F1F32 /* SignatureContract.swift */; };
@@ -38,7 +37,9 @@
 		FAEE1963210647EB001F1F32 /* DocumentDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1962210647EB001F1F32 /* DocumentDetailsRouter.swift */; };
 		FAEE196521064807001F1F32 /* DocumentDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196421064807001F1F32 /* DocumentDetailsPresenter.swift */; };
 		FAEE196721064817001F1F32 /* DocumentDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196621064817001F1F32 /* DocumentDetailsContract.swift */; };
-		FAEE196A21064834001F1F32 /* DocumentListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196921064834001F1F32 /* DocumentListAssembly.swift */; };
+		FAEE196A21064834001F1F32 /* DocumentDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196921064834001F1F32 /* DocumentDetailsAssembly.swift */; };
+		FAEE196C21064B10001F1F32 /* YPDrawSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196B21064B10001F1F32 /* YPDrawSignatureView.swift */; };
+		FAEE196E21064C6D001F1F32 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196D21064C6D001F1F32 /* SignatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +82,6 @@
 		FAEE193121063256001F1F32 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		FAEE1933210632AB001F1F32 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FAEE193521063363001F1F32 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
-		FAEE1937210644A4001F1F32 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 		FAEE194C2106468C001F1F32 /* SignatureRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureRouter.swift; sourceTree = "<group>"; };
 		FAEE194E21064698001F1F32 /* SignaturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePresenter.swift; sourceTree = "<group>"; };
 		FAEE1950210646F1001F1F32 /* SignatureContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureContract.swift; sourceTree = "<group>"; };
@@ -96,7 +96,9 @@
 		FAEE1962210647EB001F1F32 /* DocumentDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsRouter.swift; sourceTree = "<group>"; };
 		FAEE196421064807001F1F32 /* DocumentDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsPresenter.swift; sourceTree = "<group>"; };
 		FAEE196621064817001F1F32 /* DocumentDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsContract.swift; sourceTree = "<group>"; };
-		FAEE196921064834001F1F32 /* DocumentListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListAssembly.swift; sourceTree = "<group>"; };
+		FAEE196921064834001F1F32 /* DocumentDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsAssembly.swift; sourceTree = "<group>"; };
+		FAEE196B21064B10001F1F32 /* YPDrawSignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPDrawSignatureView.swift; sourceTree = "<group>"; };
+		FAEE196D21064C6D001F1F32 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,7 +340,8 @@
 		FAEE193D210644D0001F1F32 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FAEE1937210644A4001F1F32 /* SignatureViewController.swift */,
+				FAEE196B21064B10001F1F32 /* YPDrawSignatureView.swift */,
+				FAEE196D21064C6D001F1F32 /* SignatureViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,7 +450,7 @@
 		FAEE19682106481F001F1F32 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				FAEE196921064834001F1F32 /* DocumentListAssembly.swift */,
+				FAEE196921064834001F1F32 /* DocumentDetailsAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -610,11 +613,12 @@
 				FAEE196721064817001F1F32 /* DocumentDetailsContract.swift in Sources */,
 				FAEE195521064739001F1F32 /* SignatureAssembly.swift in Sources */,
 				FAEE1951210646F1001F1F32 /* SignatureContract.swift in Sources */,
-				FAEE1938210644A4001F1F32 /* SignatureViewController.swift in Sources */,
 				FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */,
 				FAEE194F21064698001F1F32 /* SignaturePresenter.swift in Sources */,
 				FAEE195F210647A2001F1F32 /* DocumentListAssembly.swift in Sources */,
+				FAEE196C21064B10001F1F32 /* YPDrawSignatureView.swift in Sources */,
 				FAEE195721064769001F1F32 /* DocumentListViewController.swift in Sources */,
+				FAEE196E21064C6D001F1F32 /* SignatureViewController.swift in Sources */,
 				FAEE195321064729001F1F32 /* SignatureInteractor.swift in Sources */,
 				FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */,
 				FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */,
@@ -624,7 +628,7 @@
 				FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */,
 				FAEE1961210647D4001F1F32 /* DocumentDetailsViewController.swift in Sources */,
 				FAEE195D21064792001F1F32 /* DocumentListContract.swift in Sources */,
-				FAEE196A21064834001F1F32 /* DocumentListAssembly.swift in Sources */,
+				FAEE196A21064834001F1F32 /* DocumentDetailsAssembly.swift in Sources */,
 				FAEE1963210647EB001F1F32 /* DocumentDetailsRouter.swift in Sources */,
 				FAEE195B21064783001F1F32 /* DocumentListInteractor.swift in Sources */,
 				FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */,
