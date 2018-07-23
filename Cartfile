@@ -1,0 +1,11 @@
+#dependency injection
+github "Swinject/Swinject" ~> 2.0.0
+
+#constraints
+github "SnapKit/SnapKit" ~> 4.0.0
+
+#Keychain 
+github "kishikawakatsumi/KeychainAccess"
+
+#Material components
+github "CosmicMind/Material"
