@@ -9,11 +9,14 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    var presenter: LoginPresenterType?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        view.backgroundColor = .red
         
     }
 
@@ -23,5 +26,9 @@ class LoginViewController: UIViewController {
     }
 
 
+}
+
+extension LoginViewController: LoginViewType {
+    
 }
 

@@ -18,6 +18,11 @@
 		FAEE192221062F2E001F1F32 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEE191D21062F2D001F1F32 /* Material.framework */; };
 		FAEE192321062F2E001F1F32 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEE191E21062F2D001F1F32 /* SnapKit.framework */; };
 		FAEE192421062F2E001F1F32 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEE191F21062F2D001F1F32 /* Swinject.framework */; };
+		FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE192C210630FA001F1F32 /* LoginRouter.swift */; };
+		FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE192E210631B2001F1F32 /* LoginContract.swift */; };
+		FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE193121063256001F1F32 /* LoginAssembly.swift */; };
+		FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1933210632AB001F1F32 /* LoginPresenter.swift */; };
+		FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE193521063363001F1F32 /* LoginInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		FAEE191D21062F2D001F1F32 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = SOURCE_ROOT; };
 		FAEE191E21062F2D001F1F32 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		FAEE191F21062F2D001F1F32 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = SOURCE_ROOT; };
+		FAEE192C210630FA001F1F32 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		FAEE192E210631B2001F1F32 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
+		FAEE193121063256001F1F32 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		FAEE1933210632AB001F1F32 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		FAEE193521063363001F1F32 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +153,13 @@
 		FAEE191621062D86001F1F32 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				FAEE18EA21061636001F1F32 /* LoginViewController.swift */,
+				FAEE193021063248001F1F32 /* Assembly */,
+				FAEE1929210630CA001F1F32 /* Contract */,
+				FAEE1928210630C5001F1F32 /* Entity */,
+				FAEE192A210630D0001F1F32 /* Interactor */,
+				FAEE192B210630DB001F1F32 /* Presenter */,
+				FAEE1927210630C0001F1F32 /* Router */,
+				FAEE1926210630B8001F1F32 /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -179,6 +195,61 @@
 				FAEE191F21062F2D001F1F32 /* Swinject.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAEE1926210630B8001F1F32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE18EA21061636001F1F32 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAEE1927210630C0001F1F32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE192C210630FA001F1F32 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAEE1928210630C5001F1F32 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FAEE1929210630CA001F1F32 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE192E210631B2001F1F32 /* LoginContract.swift */,
+			);
+			name = Contract;
+			sourceTree = "<group>";
+		};
+		FAEE192A210630D0001F1F32 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE193521063363001F1F32 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAEE192B210630DB001F1F32 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE1933210632AB001F1F32 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAEE193021063248001F1F32 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE193121063256001F1F32 /* LoginAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,8 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */,
 				FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */,
+				FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */,
+				FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */,
+				FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */,
 				FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */,
+				FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
