@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18E821061636001F1F32 /* AppDelegate.swift */; };
-		FAEE18EB21061636001F1F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18EA21061636001F1F32 /* ViewController.swift */; };
-		FAEE18EE21061636001F1F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEE18EC21061636001F1F32 /* Main.storyboard */; };
+		FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18EA21061636001F1F32 /* LoginViewController.swift */; };
 		FAEE18F021061639001F1F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEE18EF21061639001F1F32 /* Assets.xcassets */; };
 		FAEE18F321061639001F1F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEE18F121061639001F1F32 /* LaunchScreen.storyboard */; };
 		FAEE18FE21061639001F1F32 /* BioSignaturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18FD21061639001F1F32 /* BioSignaturesTests.swift */; };
 		FAEE190921061639001F1F32 /* BioSignaturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE190821061639001F1F32 /* BioSignaturesUITests.swift */; };
+		FAEE192021062F2E001F1F32 /* D913ADFB-E83A-3DE1-B44B-3BBCD0DE3EB3.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = FAEE191B21062F2D001F1F32 /* D913ADFB-E83A-3DE1-B44B-3BBCD0DE3EB3.bcsymbolmap */; };
+		FAEE192121062F2E001F1F32 /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEE191C21062F2D001F1F32 /* Motion.framework */; };
+		FAEE192221062F2E001F1F32 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEE191D21062F2D001F1F32 /* Material.framework */; };
+		FAEE192321062F2E001F1F32 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEE191E21062F2D001F1F32 /* SnapKit.framework */; };
+		FAEE192421062F2E001F1F32 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEE191F21062F2D001F1F32 /* Swinject.framework */; };
+		FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE192C210630FA001F1F32 /* LoginRouter.swift */; };
+		FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE192E210631B2001F1F32 /* LoginContract.swift */; };
+		FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE193121063256001F1F32 /* LoginAssembly.swift */; };
+		FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1933210632AB001F1F32 /* LoginPresenter.swift */; };
+		FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE193521063363001F1F32 /* LoginInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +45,7 @@
 /* Begin PBXFileReference section */
 		FAEE18E521061636001F1F32 /* BioSignatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioSignatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEE18E821061636001F1F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAEE18EA21061636001F1F32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FAEE18ED21061636001F1F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAEE18EA21061636001F1F32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAEE18EF21061639001F1F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEE18F221061639001F1F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAEE18F421061639001F1F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +55,16 @@
 		FAEE190421061639001F1F32 /* BioSignaturesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BioSignaturesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEE190821061639001F1F32 /* BioSignaturesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSignaturesUITests.swift; sourceTree = "<group>"; };
 		FAEE190A21061639001F1F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEE191B21062F2D001F1F32 /* D913ADFB-E83A-3DE1-B44B-3BBCD0DE3EB3.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "D913ADFB-E83A-3DE1-B44B-3BBCD0DE3EB3.bcsymbolmap"; path = "Carthage/Build/iOS/D913ADFB-E83A-3DE1-B44B-3BBCD0DE3EB3.bcsymbolmap"; sourceTree = SOURCE_ROOT; };
+		FAEE191C21062F2D001F1F32 /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motion.framework; path = Carthage/Build/iOS/Motion.framework; sourceTree = SOURCE_ROOT; };
+		FAEE191D21062F2D001F1F32 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = SOURCE_ROOT; };
+		FAEE191E21062F2D001F1F32 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
+		FAEE191F21062F2D001F1F32 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = SOURCE_ROOT; };
+		FAEE192C210630FA001F1F32 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		FAEE192E210631B2001F1F32 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
+		FAEE193121063256001F1F32 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		FAEE1933210632AB001F1F32 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		FAEE193521063363001F1F32 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEE192321062F2E001F1F32 /* SnapKit.framework in Frameworks */,
+				FAEE192421062F2E001F1F32 /* Swinject.framework in Frameworks */,
+				FAEE192121062F2E001F1F32 /* Motion.framework in Frameworks */,
+				FAEE192221062F2E001F1F32 /* Material.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +103,7 @@
 				FAEE18FC21061639001F1F32 /* BioSignaturesTests */,
 				FAEE190721061639001F1F32 /* BioSignaturesUITests */,
 				FAEE18E621061636001F1F32 /* Products */,
+				FAEE191A21062F07001F1F32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +120,11 @@
 		FAEE18E721061636001F1F32 /* BioSignatures */ = {
 			isa = PBXGroup;
 			children = (
+				FAEE191921062D9C001F1F32 /* DocumentDetail */,
+				FAEE191821062D93001F1F32 /* DocumentList */,
+				FAEE191721062D8E001F1F32 /* Signature */,
+				FAEE191621062D86001F1F32 /* Login */,
 				FAEE18E821061636001F1F32 /* AppDelegate.swift */,
-				FAEE18EA21061636001F1F32 /* ViewController.swift */,
-				FAEE18EC21061636001F1F32 /* Main.storyboard */,
 				FAEE18EF21061639001F1F32 /* Assets.xcassets */,
 				FAEE18F121061639001F1F32 /* LaunchScreen.storyboard */,
 				FAEE18F421061639001F1F32 /* Info.plist */,
@@ -125,6 +150,108 @@
 			path = BioSignaturesUITests;
 			sourceTree = "<group>";
 		};
+		FAEE191621062D86001F1F32 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE193021063248001F1F32 /* Assembly */,
+				FAEE1929210630CA001F1F32 /* Contract */,
+				FAEE1928210630C5001F1F32 /* Entity */,
+				FAEE192A210630D0001F1F32 /* Interactor */,
+				FAEE192B210630DB001F1F32 /* Presenter */,
+				FAEE1927210630C0001F1F32 /* Router */,
+				FAEE1926210630B8001F1F32 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FAEE191721062D8E001F1F32 /* Signature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signature;
+			sourceTree = "<group>";
+		};
+		FAEE191821062D93001F1F32 /* DocumentList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DocumentList;
+			sourceTree = "<group>";
+		};
+		FAEE191921062D9C001F1F32 /* DocumentDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DocumentDetail;
+			sourceTree = "<group>";
+		};
+		FAEE191A21062F07001F1F32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE191B21062F2D001F1F32 /* D913ADFB-E83A-3DE1-B44B-3BBCD0DE3EB3.bcsymbolmap */,
+				FAEE191D21062F2D001F1F32 /* Material.framework */,
+				FAEE191C21062F2D001F1F32 /* Motion.framework */,
+				FAEE191E21062F2D001F1F32 /* SnapKit.framework */,
+				FAEE191F21062F2D001F1F32 /* Swinject.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAEE1926210630B8001F1F32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE18EA21061636001F1F32 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAEE1927210630C0001F1F32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE192C210630FA001F1F32 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAEE1928210630C5001F1F32 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FAEE1929210630CA001F1F32 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE192E210631B2001F1F32 /* LoginContract.swift */,
+			);
+			name = Contract;
+			sourceTree = "<group>";
+		};
+		FAEE192A210630D0001F1F32 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE193521063363001F1F32 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAEE192B210630DB001F1F32 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE1933210632AB001F1F32 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAEE193021063248001F1F32 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE193121063256001F1F32 /* LoginAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +262,7 @@
 				FAEE18E121061636001F1F32 /* Sources */,
 				FAEE18E221061636001F1F32 /* Frameworks */,
 				FAEE18E321061636001F1F32 /* Resources */,
+				FAEE192521062F75001F1F32 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -230,8 +358,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEE18F321061639001F1F32 /* LaunchScreen.storyboard in Resources */,
+				FAEE192021062F2E001F1F32 /* D913ADFB-E83A-3DE1-B44B-3BBCD0DE3EB3.bcsymbolmap in Resources */,
 				FAEE18F021061639001F1F32 /* Assets.xcassets in Resources */,
-				FAEE18EE21061636001F1F32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +379,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FAEE192521062F75001F1F32 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Material.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Motion.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAEE18E121061636001F1F32 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEE18EB21061636001F1F32 /* ViewController.swift in Sources */,
+				FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */,
+				FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */,
+				FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */,
+				FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */,
+				FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */,
 				FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */,
+				FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +448,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FAEE18EC21061636001F1F32 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAEE18ED21061636001F1F32 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FAEE18F121061639001F1F32 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -431,6 +578,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BioSignatures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +599,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BioSignatures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

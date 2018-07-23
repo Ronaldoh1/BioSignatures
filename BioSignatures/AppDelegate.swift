@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder {
+    
     var window: UIWindow?
+    
+    private let assemblies: [Assembly] = [LoginAssembly()]
 
+}
+
+
+extension AppDelegate: UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setupInitialization()
+        
         return true
     }
 
@@ -41,6 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    //MARK: - Private methods
+    
+    func setupInitialization() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        guard let window = window else { return }
+        let assembler = Assembler(assemblies)
+        guard let router = assembler.resolver.resolve(LoginRouterType.self) as? LoginRouter else { return }
+        router.presentLoginViewController(in: window)
+    }
 
 }
 
