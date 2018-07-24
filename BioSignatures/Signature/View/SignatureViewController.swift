@@ -43,6 +43,8 @@ class SignatureViewController: UIViewController {
         super.viewDidLoad()
 
         setupViews()
+        
+        setNavigationBar()
     }
 
     
@@ -52,7 +54,7 @@ class SignatureViewController: UIViewController {
         guard traitCollection != previousTraitCollection else { return }
         
         switch traitCollection.verticalSizeClass {
-        case .compact: setupCompactConstraints()
+        case .regular: setupCompactConstraints()
         default: break
         }
     }
@@ -64,6 +66,21 @@ class SignatureViewController: UIViewController {
         view.addSubview(disclosureLabel)
     }
     
+    func setNavigationBar() {
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(done))
+        navigationItem.rightBarButtonItem = doneItem
+        self.navigationItem.title = "Add New Signature"
+    }
+    
+    @objc private func done() {
+        guard let image = signatureView.getSignature() else { return }
+        imageCache.setObject(image, forKey: "signature")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func cancel() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
     
     private func setupCompactConstraints() {
         signatureView.snp.makeConstraints { (make) in

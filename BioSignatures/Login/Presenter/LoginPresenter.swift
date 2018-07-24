@@ -32,4 +32,8 @@ extension LoginPresenter: LoginPresenterType {
         
     }
     
+    func presentSignatureViewController() {
+        router?.presentSignatureViewController(sender: view as! LoginViewController)
+    }
+    
 }

@@ -10,6 +10,8 @@ import UIKit
 import Material
 import SnapKit
 
+let imageCache = NSCache<NSString, UIImage>()
+
 class LoginViewController: UIViewController {
     
     var presenter: LoginPresenterType?
@@ -55,7 +57,7 @@ class LoginViewController: UIViewController {
     
     
     private lazy var signatureImageView: UIImageView = {
-        let signatureImgV = UIImageView(image: #imageLiteral(resourceName: "Signature-logo"))
+        let signatureImgV = UIImageView()
         return signatureImgV
     }()
     
@@ -118,6 +120,28 @@ class LoginViewController: UIViewController {
         view.addSubview(divider2)
         view.addSubview(createAccountButton)
         view.addSubview(addSignatureButton)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = true
+       
+       
+
+        if let cachedImage = imageCache.object(forKey: "signature") {
+           signatureImageView.image = cachedImage
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = false
+        
+       
+
     }
 
  
@@ -214,7 +238,7 @@ class LoginViewController: UIViewController {
         
         signatureImageView.isHidden = false
         
-        print("adding individual signature")
+        presenter!.presentSignatureViewController()
     }
     
     @objc private func createAccount() {
