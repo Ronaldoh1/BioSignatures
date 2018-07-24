@@ -10,6 +10,8 @@ import UIKit
 import Material
 import SnapKit
 
+let imageCache = NSCache<NSString, UIImage>()
+
 class LoginViewController: UIViewController {
     
     var presenter: LoginPresenterType?
@@ -55,7 +57,7 @@ class LoginViewController: UIViewController {
     
     
     private lazy var signatureImageView: UIImageView = {
-        let signatureImgV = UIImageView(image: #imageLiteral(resourceName: "Signature-logo"))
+        let signatureImgV = UIImageView()
         return signatureImgV
     }()
     
@@ -124,13 +126,21 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = true
+       
+       
 
+        if let cachedImage = imageCache.object(forKey: "signature") {
+           signatureImageView.image = cachedImage
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = false
+        
+       
 
     }
 

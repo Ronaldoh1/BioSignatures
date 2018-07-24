@@ -44,7 +44,7 @@ class SignatureViewController: UIViewController {
 
         setupViews()
         
-        //setNavigationBar()
+        setNavigationBar()
     }
 
     
@@ -67,23 +67,19 @@ class SignatureViewController: UIViewController {
     }
     
     func setNavigationBar() {
-        let screenSize: CGRect = UIScreen.main.bounds
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.height, height: 44))
-        let navItem = UINavigationItem(title: "Add New Signature")
-        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
-        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))
-        navItem.rightBarButtonItem = doneItem
-        navItem.leftBarButtonItem = cancelItem
-        navBar.setItems([navItem], animated: false)
-        self.view.addSubview(navBar)
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(done))
+        navigationItem.rightBarButtonItem = doneItem
+        self.navigationItem.title = "Add New Signature"
     }
     
-    @objc private func done() { // remove @objc for Swift 3
-        
+    @objc private func done() {
+        guard let image = signatureView.getSignature() else { return }
+        imageCache.setObject(image, forKey: "signature")
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc private func cancel() {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     private func setupCompactConstraints() {
