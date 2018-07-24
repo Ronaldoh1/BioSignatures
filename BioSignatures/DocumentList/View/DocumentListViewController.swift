@@ -13,6 +13,13 @@ import UIKit
 class DocumentListViewController: UIViewController {
     
     var presenter: DocumentListPresenterType?
+
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
+        tableView.delegate = self
+        tableView.dataSource = self.presenter
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +31,7 @@ class DocumentListViewController: UIViewController {
     }
     
     private func setupViews() {
-        
+        view.addSubview(tableView)
     }
     
     
@@ -44,11 +51,20 @@ class DocumentListViewController: UIViewController {
     
     
     private func setupRegularConstraints() {
-        
+        tableView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.top.equalToSuperview()
+        }
     }
     
 }
 
 extension DocumentListViewController: DocumentListViewType {
+    
+}
+
+extension DocumentListViewController: UITableViewDelegate {
     
 }

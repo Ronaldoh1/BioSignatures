@@ -23,7 +23,9 @@ class DocumentListRouter {
 extension DocumentListRouter: DocumentListRouterType {
     
     func presentDocumentListViewController(sender: UIViewController) {
-        
+        guard let controller = container.resolve(DocumentListViewType.self) as? DocumentListViewController else { return }
+        controller.navigationController?.isNavigationBarHidden = false
+        sender.navigationController?.pushViewController(controller, animated: true)
     }
     
     

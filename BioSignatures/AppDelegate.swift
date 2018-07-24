@@ -14,7 +14,7 @@ class AppDelegate: UIResponder {
     
     var window: UIWindow?
     
-    private let assemblies: [Assembly] = [LoginAssembly(), SignatureAssembly()]
+    private let assemblies: [Assembly] = [LoginAssembly(), SignatureAssembly(), DocumentListAssembly()]
 
 }
 
