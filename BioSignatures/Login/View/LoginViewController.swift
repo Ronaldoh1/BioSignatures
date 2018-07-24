@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
         toggle.backgroundColor = UIColor.init(rgb: 0xCCCCCC)
         toggle.layer.cornerRadius = 16.0
         toggle.onTintColor = UIColor(rgb: 0x0288D1)
+        toggle.addTarget(self, action: #selector(handleToggle), for: .valueChanged)
         return toggle
     }()
     
@@ -60,6 +61,7 @@ class LoginViewController: UIViewController {
     
     private lazy var checkmark1: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Checkmark"))
+        imageView.isHidden = true
         return imageView
     }()
     
@@ -68,12 +70,12 @@ class LoginViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var addSignatureButton: UIButton = {
-        var button = UIButton()
-        button.backgroundColor = UIColor.blue
+    private lazy var addSignatureButton: RaisedButton = {
+        let button = RaisedButton(frame: .zero)
+        button.backgroundColor = .white
         button.addTarget(self, action: #selector(addIndividualSignature), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        button.titleLabel?.text = "Add Signature"
+        button.setTitle("Add Signature", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
         return button
     }()
     
@@ -93,6 +95,7 @@ class LoginViewController: UIViewController {
         let bttn = RaisedButton(frame: .zero)
         bttn.backgroundColor =  UIColor(rgb: 0x0288D1)
         bttn.setTitle("Create Account", for: .normal)
+        bttn.addTarget(self, action: #selector(createAccount), for: .touchUpInside)
         return bttn
     }()
 
@@ -114,13 +117,7 @@ class LoginViewController: UIViewController {
         view.addSubview(checkmark2)
         view.addSubview(divider2)
         view.addSubview(createAccountButton)
-    }
-    
-    //private methods
-    
-    @objc private func addIndividualSignature() {
-        
-        signatureImageView.isHidden = false
+        view.addSubview(addSignatureButton)
     }
 
  
@@ -176,7 +173,12 @@ class LoginViewController: UIViewController {
             make.width.equalTo(20)
         }
         
-        
+        addSignatureButton.snp.makeConstraints { (make) in
+            make.left.equalTo(emailTextField.snp.left)
+            make.right.equalTo(emailTextField.snp.right)
+            make.height.equalTo(44)
+            make.top.equalTo(divider2.snp.bottom).offset(10)
+        }
         signatureImageView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
             make.top.equalTo(checkmark1.snp.bottom).offset(20)
@@ -205,7 +207,29 @@ class LoginViewController: UIViewController {
             make.right.equalTo(-16)
         }
     }
+    
+    //private methods
+    
+    @objc private func addIndividualSignature() {
         
+        signatureImageView.isHidden = false
+        
+        print("adding individual signature")
+    }
+    
+    @objc private func createAccount() {
+        print("Creating an account")
+    }
+    
+    @objc private func handleToggle() {
+        let checkMarkIsHidden = checkmark1.isHidden
+        
+        if  checkMarkIsHidden  {
+            checkmark1.isHidden = false
+        } else {
+            checkmark1.isHidden = true
+        }
+    }
 
 }
 
