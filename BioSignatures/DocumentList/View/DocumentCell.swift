@@ -45,6 +45,14 @@ class DocumentCell: UITableViewCell {
         return imageView
     }()
     
+    var document: Document? {
+        didSet {
+            self.documentTitle.text = document?.title
+            self.assignedTo.text = document?.assignedTo
+            self.timeStamp.text = document?.date?.toString(withFormat: "yyyy-MM-dd HH:mm")
+        }
+    }
+    
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -113,4 +121,18 @@ class DocumentCell: UITableViewCell {
         
     }
     
+}
+
+
+extension Date {
+    
+    func toString(withFormat format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        let myString = formatter.string(from: self)
+        let yourDate = formatter.date(from: myString)
+        formatter.dateFormat = format
+        
+        return formatter.string(from: yourDate!)
+    }
 }

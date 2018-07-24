@@ -30,6 +30,7 @@ class DocumentListViewController: UIViewController {
     }
     
     private func setupViews() {
+        self.navigationItem.title = "Documents to Approve"
         view.addSubview(tableView)
     }
     
@@ -68,5 +69,11 @@ extension DocumentListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        presenter?.didSelectItem(at: indexPath)
     }
 }

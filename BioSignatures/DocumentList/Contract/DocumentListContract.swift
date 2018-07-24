@@ -23,11 +23,14 @@ protocol DocumentListPresenterType: UITableViewDataSource {
     
     func viewDidAppear()
     
+    func didSelectItem(at indexPath: IndexPath)
     
 }
 
 protocol DocumentListRouterType: class {
     
     func presentDocumentListViewController(sender: UIViewController)
+    
+    func presentDocumentDetailsViewController(sender: UIViewController, document: Document)
     
 }

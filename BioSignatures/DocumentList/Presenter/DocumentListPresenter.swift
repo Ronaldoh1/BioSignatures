@@ -15,7 +15,7 @@ class DocumentListPresenter: NSObject {
     private let router: DocumentListRouterType?
     private let interactor: DocumentListInteractorType?
     
-    private let documents: [Document] = []
+    private let documents: [Document] = [Document(title: "VR Company NDA", assignedTo: "Assigned to Billy"), Document(title: "Consulting Company NDA", assignedTo: "Assigned to Billy"), Document(title: "Car Company NDA", assignedTo: "Assigned to Billy"), Document(title: "Film Company NDA", assignedTo: "Assigned to Billy")]
     
     required init(view: DocumentListViewType, router: DocumentListRouterType, interactor: DocumentListInteractorType) {
         self.view = view
@@ -31,13 +31,15 @@ extension DocumentListPresenter: DocumentListPresenterType {
         
     }
 
-    
+    func didSelectItem(at indexPath: IndexPath) {
+        router?.presentDocumentDetailsViewController(sender: view as! UIViewController, document: documents[indexPath.row])
+    }
 }
 
 extension DocumentListPresenter: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return documents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

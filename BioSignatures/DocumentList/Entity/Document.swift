@@ -14,7 +14,7 @@ class Document {
     let title: String
     let assignedTo: String
     var  signature: UIImageView?
-    var date: NSDate?
+    var date: Date?
     
     init(title: String, assignedTo: String) {
         self.title = title
