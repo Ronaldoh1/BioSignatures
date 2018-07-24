@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [addSignatureButton])
         stackView.alignment = .center
         stackView.axis = .horizontal
-        stackView.distribution = .fill
+        stackView.distribution = .equalSpacing
         return stackView
     } ()
     
@@ -105,7 +105,7 @@ class LoginViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [createAccountButton])
         stackView.alignment = .center
         stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
+        stackView.distribution = .equalSpacing
         return stackView
     } ()
 
@@ -117,7 +117,7 @@ class LoginViewController: UIViewController {
     private func setupViews() {
         view.backgroundColor = UIColor.white
         view.addSubview(mainStackview)
-        view.addSubview(createAccountButton)
+        view.addSubview(createAccountStack)
     }
     
     //private methods
@@ -149,7 +149,7 @@ class LoginViewController: UIViewController {
             $0.top.equalTo(view.snp.topMargin)
         }
         
-        createAccountButton.snp.makeConstraints {
+        createAccountStack.snp.makeConstraints {
                 $0.right.equalToSuperview()
                 $0.left.equalToSuperview()
                 $0.centerX.equalToSuperview()
