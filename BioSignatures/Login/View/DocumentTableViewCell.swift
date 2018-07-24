@@ -79,7 +79,6 @@ class DocumentTableViewCell: UITableViewCell {
         
     }
     
-    
     private func setupRegularConstraints() {
         
         chevronImg.snp.makeConstraints {
@@ -93,10 +92,6 @@ class DocumentTableViewCell: UITableViewCell {
         }
         
     }
-    
-    
-
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
