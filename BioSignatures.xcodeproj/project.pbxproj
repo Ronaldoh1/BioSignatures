@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FADA89AF21066B1F00EF63DD /* DocumentDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */; };
+		0E6D91C22106650A005A7E10 /* MCErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */; };
+		0E6D91C42106735D005A7E10 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */; };
 		FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18E821061636001F1F32 /* AppDelegate.swift */; };
 		FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18EA21061636001F1F32 /* LoginViewController.swift */; };
 		FAEE18F021061639001F1F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEE18EF21061639001F1F32 /* Assets.xcassets */; };
@@ -63,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsInteractor.swift; sourceTree = "<group>"; };
+		0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCErrorTextField.swift; sourceTree = "<group>"; };
+		0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
 		FAEE18E521061636001F1F32 /* BioSignatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioSignatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEE18E821061636001F1F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEE18EA21061636001F1F32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				FAEE18EA21061636001F1F32 /* LoginViewController.swift */,
+				0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */,
+				0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -647,9 +653,11 @@
 				FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */,
 				FADA89AF21066B1F00EF63DD /* DocumentDetailsInteractor.swift in Sources */,
 				FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */,
+				0E6D91C22106650A005A7E10 /* MCErrorTextField.swift in Sources */,
 				FAEE194D2106468C001F1F32 /* SignatureRouter.swift in Sources */,
 				FAEE196521064807001F1F32 /* DocumentDetailsPresenter.swift in Sources */,
 				FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */,
+				0E6D91C42106735D005A7E10 /* DocumentTableViewCell.swift in Sources */,
 				FAEE1961210647D4001F1F32 /* DocumentDetailsViewController.swift in Sources */,
 				FAEE195D21064792001F1F32 /* DocumentListContract.swift in Sources */,
 				FAEE196A21064834001F1F32 /* DocumentDetailsAssembly.swift in Sources */,
@@ -834,7 +842,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.TeamBio.BioSignatures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -855,7 +863,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.TeamBio.BioSignatures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
