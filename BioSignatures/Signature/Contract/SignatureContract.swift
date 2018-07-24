@@ -1,5 +1,5 @@
 //
-//  LoginContract.swift
+//  SignatureContract.swift
 //  BioSignatures
 //
 //  Created by Hernandez, Ronald on 7/23/18.
@@ -8,31 +8,26 @@
 
 import UIKit
 
-protocol LoginViewType: class {
+protocol SignatureViewType: class {
     
-    var presenter: LoginPresenterType? { get set }
+    var presenter: SignaturePresenterType? { get set }
+    
+}
+
+protocol SignatureInteractorType: class {
     
     
 }
 
-protocol LoginInteractorType: class {
-    
-    
-}
-
-protocol LoginPresenterType: class {
+protocol SignaturePresenterType: class {
     
     func viewDidAppear()
     func signUp(email: String, password: String)
-    func presentSignatureViewController()
-
     
     
 }
 
-protocol LoginRouterType: class {
-    
-    func presentLoginViewController(in window: UIWindow)
+protocol SignatureRouterType: class {
     
     func presentSignatureViewController(sender: UIViewController)
     

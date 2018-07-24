@@ -30,4 +30,9 @@ extension LoginRouter: LoginRouterType {
         windwow.rootViewController = rootViewController
     }
     
+    func presentSignatureViewController(sender: UIViewController) {
+        guard let router = container.resolve(SignatureRouterType.self) as? SignatureRouter else { return }
+        router.presentSignatureViewController(sender: sender)
+    }
+    
 }
