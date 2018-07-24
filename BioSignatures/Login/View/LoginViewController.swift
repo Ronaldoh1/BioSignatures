@@ -119,6 +119,20 @@ class LoginViewController: UIViewController {
         view.addSubview(createAccountButton)
         view.addSubview(addSignatureButton)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = true
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = false
+
+    }
 
  
     //MARK: Set up views
@@ -214,7 +228,7 @@ class LoginViewController: UIViewController {
         
         signatureImageView.isHidden = false
         
-        print("adding individual signature")
+        presenter!.presentSignatureViewController()
     }
     
     @objc private func createAccount() {

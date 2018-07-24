@@ -22,7 +22,10 @@ class  SignatureRouter {
 extension  SignatureRouter:  SignatureRouterType {
     
     func presentSignatureViewController(sender: UIViewController) {
-  
+        guard let controller = container.resolve(SignatureViewType.self) as? SignatureViewController else { return }
+        controller.navigationController?.isNavigationBarHidden = false
+        sender.navigationController?.pushViewController(controller, animated: true)
+        
     }
     
 }

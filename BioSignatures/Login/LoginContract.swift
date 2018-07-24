@@ -12,6 +12,7 @@ protocol LoginViewType: class {
     
     var presenter: LoginPresenterType? { get set }
     
+    
 }
 
 protocol LoginInteractorType: class {
@@ -23,6 +24,8 @@ protocol LoginPresenterType: class {
     
     func viewDidAppear()
     func signUp(email: String, password: String)
+    func presentSignatureViewController()
+
     
     
 }
@@ -30,5 +33,7 @@ protocol LoginPresenterType: class {
 protocol LoginRouterType: class {
     
     func presentLoginViewController(in window: UIWindow)
+    
+    func presentSignatureViewController(sender: UIViewController)
     
 }
