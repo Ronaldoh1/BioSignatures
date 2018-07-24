@@ -105,7 +105,7 @@ class LoginViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [createAccountButton])
         stackView.alignment = .center
         stackView.axis = .horizontal
-        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
         return stackView
     } ()
 
@@ -139,9 +139,7 @@ class LoginViewController: UIViewController {
         case .regular: setupRegularConstraints()
         default: break
         }
-        
     }
-    
     
     private func setupRegularConstraints() {
         
@@ -152,6 +150,8 @@ class LoginViewController: UIViewController {
         }
         
         createAccountButton.snp.makeConstraints {
+                $0.right.equalToSuperview()
+                $0.left.equalToSuperview()
                 $0.centerX.equalToSuperview()
                 $0.bottom.equalTo(view.snp.bottomMargin)
             }
