@@ -24,7 +24,7 @@ extension DocumentListRouter: DocumentListRouterType {
     
     func presentDocumentDetailsViewController(sender: UIViewController, document: Document) {
         guard let router = container.resolve(DocumentDetailsRouterType.self) else { return }
-        router.presentDocumentDetailsViewController(sender: sender, document: Document)
+        router.presentDocumentDetailsViewController(sender: sender, document: document)
     }
     
     

@@ -23,7 +23,8 @@ class  DocumentDetailsRouter {
 extension  DocumentDetailsRouter:  DocumentDetailsRouterType {
     
     func presentDocumentDetailsViewController(sender: UIViewController, document: Document) {
-        guard let controller = container.resolve(DocumentListViewType.self) as? DocumentListViewController else { return }
+        guard let controller = container.resolve(DocumentDetailsViewType.self) as? DocumentDetailsViewController else { return }
+        controller.navigationItem.leftBarButtonItem = nil
         sender.navigationController?.pushViewController(controller, animated: true)
     }
     

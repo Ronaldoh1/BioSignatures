@@ -41,6 +41,7 @@ class DocumentCell: UITableViewCell {
     
     private let checkMarkImageView: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Checkmark"))
+        imageView.isHidden = true
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -49,7 +50,6 @@ class DocumentCell: UITableViewCell {
         didSet {
             self.documentTitle.text = document?.title
             self.assignedTo.text = document?.assignedTo
-            self.timeStamp.text = document?.date?.toString(withFormat: "yyyy-MM-dd HH:mm")
         }
     }
     

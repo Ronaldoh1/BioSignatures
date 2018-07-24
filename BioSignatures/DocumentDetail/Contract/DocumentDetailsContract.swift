@@ -29,6 +29,6 @@ protocol DocumentDetailsPresenterType: class {
 
 protocol DocumentDetailsRouterType: class {
     
-    func presentDocumentDetailsViewController(sender: UIViewController)
+    func presentDocumentDetailsViewController(sender: UIViewController, document: Document)
     
 }
