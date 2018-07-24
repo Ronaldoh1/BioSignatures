@@ -36,78 +36,68 @@ class LoginViewController: UIViewController {
         return textfield
     }()
     
-    private lazy var textFieldStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField])
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.distribution = .fillEqually
-        return stackView
-    } ()
     
-    private lazy var toggle: UISwitch = {
+    private let toggle: UISwitch = {
         let toggle = UISwitch()
+        toggle.backgroundColor = UIColor.init(rgb: 0xCCCCCC)
+        toggle.layer.cornerRadius = 16.0
+        toggle.onTintColor = UIColor(rgb: 0x0288D1)
+        toggle.addTarget(self, action: #selector(handleToggle), for: .valueChanged)
         return toggle
     }()
     
     private lazy var toggleLabel: UILabel = {
         let label = UILabel()
         label.text = "Add Face ID"
+        label.textColor = .gray
         return label
     }()
     
-    private lazy var addFaceStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [toggle, toggleLabel])
-        stackView.axis = .horizontal
-        stackView.spacing = 10
-        stackView.distribution = .fill
-        return stackView
-    } ()
     
     private lazy var signatureImageView: UIImageView = {
-        let signatureImgV = UIImageView()
-        signatureImgV.isHidden = true
+        let signatureImgV = UIImageView(image: #imageLiteral(resourceName: "Signature-logo"))
         return signatureImgV
     }()
     
-    private lazy var addSignatureButton: UIButton = {
-        var button = UIButton()
-        button.backgroundColor = UIColor.blue
+    private lazy var checkmark1: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "Checkmark"))
+        imageView.isHidden = true
+        return imageView
+    }()
+    
+    private lazy var checkmark2: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "Checkmark"))
+        return imageView
+    }()
+    
+    private lazy var addSignatureButton: RaisedButton = {
+        let button = RaisedButton(frame: .zero)
+        button.backgroundColor = .white
         button.addTarget(self, action: #selector(addIndividualSignature), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        button.titleLabel?.text = "Add Signature"
+        button.setTitle("Add Signature", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
         return button
     }()
     
-    private lazy var buttonStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [addSignatureButton])
-        stackView.alignment = .center
-        stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
-        return stackView
-    } ()
-    
-    private lazy var mainStackview: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [textFieldStackView, addFaceStackView, buttonStackView])
-        stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 10
-        return stackView
-    } ()
-    
-    private lazy var createAccountButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = UIColor.blue
-        button.titleLabel?.text = "Create Account"
-        return button
+    private let divider1: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        return view
     }()
     
-    private lazy var createAccountStack: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [createAccountButton])
-        stackView.alignment = .center
-        stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
-        return stackView
-    } ()
+    private let divider2: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        return view
+    }()
+    
+    private lazy var createAccountButton: RaisedButton = {
+        let bttn = RaisedButton(frame: .zero)
+        bttn.backgroundColor =  UIColor(rgb: 0x0288D1)
+        bttn.setTitle("Create Account", for: .normal)
+        bttn.addTarget(self, action: #selector(createAccount), for: .touchUpInside)
+        return bttn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,16 +105,19 @@ class LoginViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = UIColor.white
-        view.addSubview(mainStackview)
-        view.addSubview(createAccountStack)
-    }
-    
-    //private methods
-    
-    @objc func addIndividualSignature() {
+        view.backgroundColor = UIColor.init(rgb: 0xDBE1EA)
         
-        signatureImageView.isHidden = false
+        view.addSubview(emailTextField)
+        view.addSubview(passwordTextField)
+        view.addSubview(toggle)
+        view.addSubview(toggleLabel)
+        view.addSubview(signatureImageView)
+        view.addSubview(divider1)
+        view.addSubview(checkmark1)
+        view.addSubview(checkmark2)
+        view.addSubview(divider2)
+        view.addSubview(createAccountButton)
+        view.addSubview(addSignatureButton)
     }
 
  
@@ -142,20 +135,102 @@ class LoginViewController: UIViewController {
     }
     
     private func setupRegularConstraints() {
-        
-        mainStackview.snp.makeConstraints {
-            $0.left.equalTo(view.snp.leftMargin)
-            $0.right.equalTo(view.snp.rightMargin)
-            $0.top.equalTo(view.snp.topMargin)
+
+        emailTextField.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.top.equalToSuperview().offset(100)
         }
         
-        createAccountStack.snp.makeConstraints {
-                $0.right.equalToSuperview()
-                $0.left.equalToSuperview()
-                $0.centerX.equalToSuperview()
-                $0.bottom.equalTo(view.snp.bottomMargin)
-            }
+        passwordTextField.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.top.equalTo(emailTextField.snp.bottom).offset(25)
         }
+        
+        toggle.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(16)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(25)
+        }
+        
+        toggleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(toggle.snp.right).offset(15)
+            make.centerY.equalTo(toggle.snp.centerY)
+            make.right.equalToSuperview()
+        }
+        
+        checkmark1.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-16)
+            make.centerY.equalTo(toggle.snp.centerY)
+            make.height.equalTo(20)
+            make.width.equalTo(20)
+        }
+        
+        checkmark2.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-16)
+            make.centerY.equalTo(signatureImageView.snp.centerY)
+            make.height.equalTo(20)
+            make.width.equalTo(20)
+        }
+        
+        addSignatureButton.snp.makeConstraints { (make) in
+            make.left.equalTo(emailTextField.snp.left)
+            make.right.equalTo(emailTextField.snp.right)
+            make.height.equalTo(44)
+            make.top.equalTo(divider2.snp.bottom).offset(10)
+        }
+        signatureImageView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(16)
+            make.top.equalTo(checkmark1.snp.bottom).offset(20)
+            make.height.equalTo(75)
+            make.width.equalTo(150)
+        }
+        
+        divider1.snp.makeConstraints { (make) in
+            make.left.equalTo(emailTextField.snp.left)
+            make.right.equalTo(emailTextField.snp.right)
+            make.top.equalTo(toggleLabel.snp.bottom).offset(15)
+            make.height.equalTo(0.5)
+        }
+        
+        divider2.snp.makeConstraints { (make) in
+            make.left.equalTo(emailTextField.snp.left)
+            make.right.equalTo(emailTextField.snp.right)
+            make.top.equalTo(signatureImageView.snp.bottom).offset(10)
+            make.height.equalTo(0.5)
+        }
+        
+        createAccountButton.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().offset(-16)
+            make.height.equalTo(44)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalTo(-16)
+        }
+    }
+    
+    //private methods
+    
+    @objc private func addIndividualSignature() {
+        
+        signatureImageView.isHidden = false
+        
+        print("adding individual signature")
+    }
+    
+    @objc private func createAccount() {
+        print("Creating an account")
+    }
+    
+    @objc private func handleToggle() {
+        let checkMarkIsHidden = checkmark1.isHidden
+        
+        if  checkMarkIsHidden  {
+            checkmark1.isHidden = false
+        } else {
+            checkmark1.isHidden = true
+        }
+    }
+
 }
 
 extension LoginViewController: LoginViewType {

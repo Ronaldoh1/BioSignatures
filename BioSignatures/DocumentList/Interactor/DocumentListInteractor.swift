@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class DocumentListInteractor {
+    
+    
+}
+
+extension DocumentListInteractor: DocumentListInteractorType {
+    
+}
