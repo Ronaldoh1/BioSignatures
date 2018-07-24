@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E6D91C22106650A005A7E10 /* MCErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */; };
-		0E6D91C42106735D005A7E10 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */; };
+		0E6D91C82106CC9F005A7E10 /* ApproveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C72106CC9F005A7E10 /* ApproveTableViewCell.swift */; };
+		0E6D91CA2106CCAF005A7E10 /* SignatureCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C92106CCAF005A7E10 /* SignatureCellTableViewCell.swift */; };
 		FADA89AF21066B1F00EF63DD /* DocumentDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */; };
 		FADA89B12106F39B00EF63DD /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADA89B02106F39B00EF63DD /* LocalAuthentication.framework */; };
 		FADA89B32106FB8100EF63DD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89B22106FB8100EF63DD /* Document.swift */; };
@@ -67,7 +68,8 @@
 
 /* Begin PBXFileReference section */
 		0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCErrorTextField.swift; sourceTree = "<group>"; };
-		0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
+		0E6D91C72106CC9F005A7E10 /* ApproveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTableViewCell.swift; sourceTree = "<group>"; };
+		0E6D91C92106CCAF005A7E10 /* SignatureCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureCellTableViewCell.swift; sourceTree = "<group>"; };
 		FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsInteractor.swift; sourceTree = "<group>"; };
 		FADA89B02106F39B00EF63DD /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		FADA89B22106FB8100EF63DD /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -278,8 +280,9 @@
 			isa = PBXGroup;
 			children = (
 				FAEE18EA21061636001F1F32 /* LoginViewController.swift */,
+				0E6D91C72106CC9F005A7E10 /* ApproveTableViewCell.swift */,
+				0E6D91C92106CCAF005A7E10 /* SignatureCellTableViewCell.swift */,
 				0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */,
-				0E6D91C32106735D005A7E10 /* DocumentTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -646,11 +649,13 @@
 			files = (
 				FAEE1971210667F8001F1F32 /* DocumentListPresenter.swift in Sources */,
 				FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */,
+				0E6D91C82106CC9F005A7E10 /* ApproveTableViewCell.swift in Sources */,
 				FAEE196721064817001F1F32 /* DocumentDetailsContract.swift in Sources */,
 				FAEE195521064739001F1F32 /* SignatureAssembly.swift in Sources */,
 				FADA89B32106FB8100EF63DD /* Document.swift in Sources */,
 				FAEE1951210646F1001F1F32 /* SignatureContract.swift in Sources */,
 				FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */,
+				0E6D91CA2106CCAF005A7E10 /* SignatureCellTableViewCell.swift in Sources */,
 				FAEE194F21064698001F1F32 /* SignaturePresenter.swift in Sources */,
 				FAEE195F210647A2001F1F32 /* DocumentListAssembly.swift in Sources */,
 				FAEE196C21064B10001F1F32 /* YPDrawSignatureView.swift in Sources */,
@@ -665,7 +670,6 @@
 				FAEE194D2106468C001F1F32 /* SignatureRouter.swift in Sources */,
 				FAEE196521064807001F1F32 /* DocumentDetailsPresenter.swift in Sources */,
 				FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */,
-				0E6D91C42106735D005A7E10 /* DocumentTableViewCell.swift in Sources */,
 				FAEE1961210647D4001F1F32 /* DocumentDetailsViewController.swift in Sources */,
 				FAEE195D21064792001F1F32 /* DocumentListContract.swift in Sources */,
 				FAEE196A21064834001F1F32 /* DocumentDetailsAssembly.swift in Sources */,
