@@ -25,6 +25,23 @@
 		FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE193121063256001F1F32 /* LoginAssembly.swift */; };
 		FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1933210632AB001F1F32 /* LoginPresenter.swift */; };
 		FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE193521063363001F1F32 /* LoginInteractor.swift */; };
+		FAEE194D2106468C001F1F32 /* SignatureRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE194C2106468C001F1F32 /* SignatureRouter.swift */; };
+		FAEE194F21064698001F1F32 /* SignaturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE194E21064698001F1F32 /* SignaturePresenter.swift */; };
+		FAEE1951210646F1001F1F32 /* SignatureContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1950210646F1001F1F32 /* SignatureContract.swift */; };
+		FAEE195321064729001F1F32 /* SignatureInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE195221064729001F1F32 /* SignatureInteractor.swift */; };
+		FAEE195521064739001F1F32 /* SignatureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE195421064739001F1F32 /* SignatureAssembly.swift */; };
+		FAEE195721064769001F1F32 /* DocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE195621064769001F1F32 /* DocumentListViewController.swift */; };
+		FAEE195921064774001F1F32 /* DocumentListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE195821064774001F1F32 /* DocumentListRouter.swift */; };
+		FAEE195B21064783001F1F32 /* DocumentListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE195A21064783001F1F32 /* DocumentListInteractor.swift */; };
+		FAEE195D21064792001F1F32 /* DocumentListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE195C21064792001F1F32 /* DocumentListContract.swift */; };
+		FAEE195F210647A2001F1F32 /* DocumentListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE195E210647A2001F1F32 /* DocumentListAssembly.swift */; };
+		FAEE1961210647D4001F1F32 /* DocumentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1960210647D4001F1F32 /* DocumentDetailsViewController.swift */; };
+		FAEE1963210647EB001F1F32 /* DocumentDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1962210647EB001F1F32 /* DocumentDetailsRouter.swift */; };
+		FAEE196521064807001F1F32 /* DocumentDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196421064807001F1F32 /* DocumentDetailsPresenter.swift */; };
+		FAEE196721064817001F1F32 /* DocumentDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196621064817001F1F32 /* DocumentDetailsContract.swift */; };
+		FAEE196A21064834001F1F32 /* DocumentDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196921064834001F1F32 /* DocumentDetailsAssembly.swift */; };
+		FAEE196C21064B10001F1F32 /* YPDrawSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196B21064B10001F1F32 /* YPDrawSignatureView.swift */; };
+		FAEE196E21064C6D001F1F32 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE196D21064C6D001F1F32 /* SignatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +86,23 @@
 		FAEE193121063256001F1F32 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		FAEE1933210632AB001F1F32 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FAEE193521063363001F1F32 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		FAEE194C2106468C001F1F32 /* SignatureRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureRouter.swift; sourceTree = "<group>"; };
+		FAEE194E21064698001F1F32 /* SignaturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePresenter.swift; sourceTree = "<group>"; };
+		FAEE1950210646F1001F1F32 /* SignatureContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureContract.swift; sourceTree = "<group>"; };
+		FAEE195221064729001F1F32 /* SignatureInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureInteractor.swift; sourceTree = "<group>"; };
+		FAEE195421064739001F1F32 /* SignatureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureAssembly.swift; sourceTree = "<group>"; };
+		FAEE195621064769001F1F32 /* DocumentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListViewController.swift; sourceTree = "<group>"; };
+		FAEE195821064774001F1F32 /* DocumentListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListRouter.swift; sourceTree = "<group>"; };
+		FAEE195A21064783001F1F32 /* DocumentListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListInteractor.swift; sourceTree = "<group>"; };
+		FAEE195C21064792001F1F32 /* DocumentListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListContract.swift; sourceTree = "<group>"; };
+		FAEE195E210647A2001F1F32 /* DocumentListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListAssembly.swift; sourceTree = "<group>"; };
+		FAEE1960210647D4001F1F32 /* DocumentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsViewController.swift; sourceTree = "<group>"; };
+		FAEE1962210647EB001F1F32 /* DocumentDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsRouter.swift; sourceTree = "<group>"; };
+		FAEE196421064807001F1F32 /* DocumentDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsPresenter.swift; sourceTree = "<group>"; };
+		FAEE196621064817001F1F32 /* DocumentDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsContract.swift; sourceTree = "<group>"; };
+		FAEE196921064834001F1F32 /* DocumentDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsAssembly.swift; sourceTree = "<group>"; };
+		FAEE196B21064B10001F1F32 /* YPDrawSignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPDrawSignatureView.swift; sourceTree = "<group>"; };
+		FAEE196D21064C6D001F1F32 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +205,13 @@
 		FAEE191721062D8E001F1F32 /* Signature */ = {
 			isa = PBXGroup;
 			children = (
+				FAEE1939210644B6001F1F32 /* Assembly */,
+				FAEE193E210644DB001F1F32 /* Contract */,
+				FAEE19452106453A001F1F32 /* Entity */,
+				FAEE193B210644C4001F1F32 /* Interactor */,
+				FAEE193C210644C9001F1F32 /* Presenter */,
+				FAEE193A210644BC001F1F32 /* Router */,
+				FAEE193D210644D0001F1F32 /* View */,
 			);
 			path = Signature;
 			sourceTree = "<group>";
@@ -178,6 +219,12 @@
 		FAEE191821062D93001F1F32 /* DocumentList */ = {
 			isa = PBXGroup;
 			children = (
+				FAEE193F210644E8001F1F32 /* Assembly */,
+				FAEE1940210644EE001F1F32 /* Contract */,
+				FAEE19442106452B001F1F32 /* Entity */,
+				FAEE194321064502001F1F32 /* Interactor */,
+				FAEE1941210644F4001F1F32 /* Router */,
+				FAEE1942210644FD001F1F32 /* View */,
 			);
 			path = DocumentList;
 			sourceTree = "<group>";
@@ -185,6 +232,12 @@
 		FAEE191921062D9C001F1F32 /* DocumentDetail */ = {
 			isa = PBXGroup;
 			children = (
+				FAEE19682106481F001F1F32 /* Assembly */,
+				FAEE19472106454C001F1F32 /* Contract */,
+				FAEE194621064548001F1F32 /* Entity */,
+				FAEE194B21064577001F1F32 /* Presenter */,
+				FAEE19492106455D001F1F32 /* Router */,
+				FAEE194821064559001F1F32 /* View */,
 			);
 			path = DocumentDetail;
 			sourceTree = "<group>";
@@ -254,6 +307,156 @@
 			isa = PBXGroup;
 			children = (
 				FAEE193121063256001F1F32 /* LoginAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FAEE1939210644B6001F1F32 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE195421064739001F1F32 /* SignatureAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FAEE193A210644BC001F1F32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE194C2106468C001F1F32 /* SignatureRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAEE193B210644C4001F1F32 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE195221064729001F1F32 /* SignatureInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAEE193C210644C9001F1F32 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE194E21064698001F1F32 /* SignaturePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAEE193D210644D0001F1F32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE196B21064B10001F1F32 /* YPDrawSignatureView.swift */,
+				FAEE196D21064C6D001F1F32 /* SignatureViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAEE193E210644DB001F1F32 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE1950210646F1001F1F32 /* SignatureContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		FAEE193F210644E8001F1F32 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE195E210647A2001F1F32 /* DocumentListAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FAEE1940210644EE001F1F32 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE195C21064792001F1F32 /* DocumentListContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		FAEE1941210644F4001F1F32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE195821064774001F1F32 /* DocumentListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAEE1942210644FD001F1F32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE195621064769001F1F32 /* DocumentListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAEE194321064502001F1F32 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE195A21064783001F1F32 /* DocumentListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAEE19442106452B001F1F32 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FAEE19452106453A001F1F32 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FAEE194621064548001F1F32 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FAEE19472106454C001F1F32 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE196621064817001F1F32 /* DocumentDetailsContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		FAEE194821064559001F1F32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE1960210647D4001F1F32 /* DocumentDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAEE19492106455D001F1F32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE1962210647EB001F1F32 /* DocumentDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAEE194B21064577001F1F32 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE196421064807001F1F32 /* DocumentDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAEE19682106481F001F1F32 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE196921064834001F1F32 /* DocumentDetailsAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -413,14 +616,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEE1934210632AB001F1F32 /* LoginPresenter.swift in Sources */,
+				FAEE196721064817001F1F32 /* DocumentDetailsContract.swift in Sources */,
+				FAEE195521064739001F1F32 /* SignatureAssembly.swift in Sources */,
+				FAEE1951210646F1001F1F32 /* SignatureContract.swift in Sources */,
 				FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */,
+				FAEE194F21064698001F1F32 /* SignaturePresenter.swift in Sources */,
+				FAEE195F210647A2001F1F32 /* DocumentListAssembly.swift in Sources */,
+				FAEE196C21064B10001F1F32 /* YPDrawSignatureView.swift in Sources */,
+				FAEE195721064769001F1F32 /* DocumentListViewController.swift in Sources */,
+				FAEE196E21064C6D001F1F32 /* SignatureViewController.swift in Sources */,
+				FAEE195321064729001F1F32 /* SignatureInteractor.swift in Sources */,
 				FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */,
 				FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */,
 				FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */,
 				0E6D91C22106650A005A7E10 /* MCErrorTextField.swift in Sources */,
+				FAEE194D2106468C001F1F32 /* SignatureRouter.swift in Sources */,
+				FAEE196521064807001F1F32 /* DocumentDetailsPresenter.swift in Sources */,
 				FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */,
 				0E6D91C42106735D005A7E10 /* DocumentTableViewCell.swift in Sources */,
+				FAEE1961210647D4001F1F32 /* DocumentDetailsViewController.swift in Sources */,
+				FAEE195D21064792001F1F32 /* DocumentListContract.swift in Sources */,
+				FAEE196A21064834001F1F32 /* DocumentDetailsAssembly.swift in Sources */,
+				FAEE1963210647EB001F1F32 /* DocumentDetailsRouter.swift in Sources */,
+				FAEE195B21064783001F1F32 /* DocumentListInteractor.swift in Sources */,
 				FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */,
+				FAEE195921064774001F1F32 /* DocumentListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
