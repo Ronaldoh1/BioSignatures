@@ -27,7 +27,6 @@ protocol LoginPresenterType: class {
     func presentSignatureViewController()
 
     
-    
 }
 
 protocol LoginRouterType: class {

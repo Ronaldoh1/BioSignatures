@@ -19,10 +19,9 @@ protocol DocumentListInteractorType: class {
     
 }
 
-protocol DocumentListPresenterType: class {
+protocol DocumentListPresenterType: UITableViewDataSource {
     
     func viewDidAppear()
-    func signUp(email: String, password: String)
     
     
 }

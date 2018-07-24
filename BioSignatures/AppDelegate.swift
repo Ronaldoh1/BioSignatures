@@ -53,7 +53,7 @@ extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         if let navigationController = self.window?.rootViewController as? UINavigationController {
             if navigationController.visibleViewController is SignatureViewController {
-                return UIInterfaceOrientationMask.landscape
+                return UIInterfaceOrientationMask.allButUpsideDown
             } else {
                 return UIInterfaceOrientationMask.portrait
             }

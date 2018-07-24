@@ -321,8 +321,10 @@ extension LoginViewController {
                 if success {
                     
                     //TODO: User authenticated successfully, take appropriate action
-                    
-                   self.presenter?.signUp()
+                    DispatchQueue.main.async {
+                        self.presenter?.signUp()
+
+                    }
                     
                 } else {
                     //TODO: User did not authenticate successfully, look at error and take appropriate action

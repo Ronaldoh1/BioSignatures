@@ -13,6 +13,7 @@
 		FADA89AF21066B1F00EF63DD /* DocumentDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */; };
 		FADA89B12106F39B00EF63DD /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADA89B02106F39B00EF63DD /* LocalAuthentication.framework */; };
 		FADA89B32106FB8100EF63DD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89B22106FB8100EF63DD /* Document.swift */; };
+		FADA89B52107016C00EF63DD /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89B42107016C00EF63DD /* DocumentCell.swift */; };
 		FAEE18E921061636001F1F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18E821061636001F1F32 /* AppDelegate.swift */; };
 		FAEE18EB21061636001F1F32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE18EA21061636001F1F32 /* LoginViewController.swift */; };
 		FAEE18F021061639001F1F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEE18EF21061639001F1F32 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsInteractor.swift; sourceTree = "<group>"; };
 		FADA89B02106F39B00EF63DD /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		FADA89B22106FB8100EF63DD /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		FADA89B42107016C00EF63DD /* DocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCell.swift; sourceTree = "<group>"; };
 		FAEE18E521061636001F1F32 /* BioSignatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioSignatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEE18E821061636001F1F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEE18EA21061636001F1F32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEE195621064769001F1F32 /* DocumentListViewController.swift */,
+				FADA89B42107016C00EF63DD /* DocumentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				FAEE195B21064783001F1F32 /* DocumentListInteractor.swift in Sources */,
 				FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */,
 				FAEE195921064774001F1F32 /* DocumentListRouter.swift in Sources */,
+				FADA89B52107016C00EF63DD /* DocumentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

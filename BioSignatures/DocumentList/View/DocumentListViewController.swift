@@ -16,17 +16,16 @@ class DocumentListViewController: UIViewController {
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
+        tableView.register(DocumentCell.self, forCellReuseIdentifier: DocumentCell.cellID)
         tableView.delegate = self
         tableView.dataSource = self.presenter
+        return tableView
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        view.backgroundColor = .red
-        
+                
         setupViews()
     }
     
@@ -55,7 +54,7 @@ class DocumentListViewController: UIViewController {
             make.left.equalToSuperview()
             make.right.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.top.equalToSuperview()
+            make.top.equalTo(view.snp.top).offset(44)
         }
     }
     
@@ -67,4 +66,7 @@ extension DocumentListViewController: DocumentListViewType {
 
 extension DocumentListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

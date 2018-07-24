@@ -30,10 +30,7 @@ extension DocumentListPresenter: DocumentListPresenterType {
     func viewDidAppear() {
         
     }
-    
-    func signUp(email: String, password: String) {
-        
-    }
+
     
 }
 
@@ -44,7 +41,7 @@ extension DocumentListPresenter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DocumentCell.cellID, for: indexPath) as? DocumentCell else {
             return UITableViewCell()
         }
         return cell
