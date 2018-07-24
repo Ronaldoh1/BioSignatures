@@ -82,6 +82,15 @@ class DocumentTableViewCell: UITableViewCell {
     
     private func setupRegularConstraints() {
         
+        chevronImg.snp.makeConstraints {
+            $0.right.equalTo(contentView.snp.rightMargin)
+            $0.top.equalTo(contentView.snp.topMargin)
+        }
+        
+        mainStackView.snp.makeConstraints {
+            $0.left.equalTo(contentView.snp.leftMargin)
+            $0.top.equalTo(contentView.snp.topMargin)
+        }
         
     }
     
