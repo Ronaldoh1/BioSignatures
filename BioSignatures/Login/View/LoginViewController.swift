@@ -69,6 +69,7 @@ class LoginViewController: UIViewController {
     
     private lazy var checkmark2: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Checkmark"))
+        imageView.isHidden = true
         return imageView
     }()
     
@@ -95,6 +96,7 @@ class LoginViewController: UIViewController {
     
     private lazy var createAccountButton: RaisedButton = {
         let bttn = RaisedButton(frame: .zero)
+        bttn.isEnabled = false
         bttn.backgroundColor =  UIColor(rgb: 0x0288D1)
         bttn.setTitle("Create Account", for: .normal)
         bttn.addTarget(self, action: #selector(createAccount), for: .touchUpInside)
@@ -131,7 +133,9 @@ class LoginViewController: UIViewController {
 
         if let cachedImage = imageCache.object(forKey: "signature") {
            signatureImageView.image = cachedImage
+            checkmark2.isHidden = false
         }
+        canCreateAccount()
         
     }
     
@@ -139,9 +143,6 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = false
-        
-       
-
     }
 
  
@@ -242,7 +243,11 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func createAccount() {
-        print("Creating an account")
+        
+        if imageCache.object(forKey: "signature") != nil && toggle.isOn {
+            print("present the list of documents ")
+        }
+        
     }
     
     @objc private func handleToggle() {
@@ -250,8 +255,20 @@ class LoginViewController: UIViewController {
         
         if  checkMarkIsHidden  {
             checkmark1.isHidden = false
+            canCreateAccount()
         } else {
             checkmark1.isHidden = true
+            canCreateAccount()
+        }
+    }
+    
+    private func canCreateAccount() {
+        if imageCache.object(forKey: "signature") != nil && toggle.isOn && emailTextField.text != nil, passwordTextField.text != nil {
+            createAccountButton.isEnabled = true
+            createAccountButton.backgroundColor =  UIColor(rgb: 0x0288D1)
+        } else {
+            createAccountButton.isEnabled = false
+            createAccountButton.backgroundColor = UIColor.gray
         }
     }
 
