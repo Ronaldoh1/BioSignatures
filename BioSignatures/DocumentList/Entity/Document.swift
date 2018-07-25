@@ -13,7 +13,8 @@ class Document {
     
     let title: String
     let assignedTo: String
-    var  signature: UIImageView?
+    var signature: UIImageView?
+    var isSigned = false
     var date: Date?
     
     init(title: String, assignedTo: String) {

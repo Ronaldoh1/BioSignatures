@@ -46,6 +46,9 @@ extension DocumentListPresenter: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DocumentCell.cellID, for: indexPath) as? DocumentCell else {
             return UITableViewCell()
         }
+        
+        cell.document = documents[indexPath.row]
+        
         return cell
     }
 }

@@ -30,8 +30,22 @@ class DocumentDetailsViewController: UIViewController {
         return button
     }()
     
+    var document: Document?
+    
+    private let signatureView: UIImageView = {
+        let signatureImage = imageCache.object(forKey: "signature")
+        let iv = UIImageView(image: signatureImage)
+        iv.contentMode = .scaleAspectFit
+        iv.isHidden = true 
+        return iv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if document!.isSigned {
+            signatureView.isHidden = false
+        }
 
         setupViews()
     }
@@ -40,6 +54,8 @@ class DocumentDetailsViewController: UIViewController {
         view.backgroundColor = UIColor.init(rgb: 0xDBE1EA)
         view.addSubview(documentView)
         view.addSubview(reviewDocumentButton)
+        view.addSubview(signatureView)
+        setupNavigationBar()
     }
     
     
@@ -66,6 +82,13 @@ class DocumentDetailsViewController: UIViewController {
             make.height.equalTo(358)
         }
         
+        signatureView.snp.makeConstraints { (make) in
+            make.height.equalTo(200)
+            make.width.equalTo(225)
+            make.top.equalTo(documentView.snp.bottom)
+            make.centerX.equalToSuperview()
+        }
+        
         reviewDocumentButton.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().offset(-10)
@@ -74,6 +97,17 @@ class DocumentDetailsViewController: UIViewController {
         }
     }
     
+    func setupNavigationBar() {
+        let approveItem = UIBarButtonItem(title: "Approve", style: .done, target: self, action: #selector(approve))
+        navigationItem.rightBarButtonItem = approveItem
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    @objc private func approve() {
+        authenticateWithBioMetrics()
+    }
+    
+
     
     //MARK: - Private documents
     
@@ -105,6 +139,11 @@ extension DocumentDetailsViewController {
                     
                     //TODO: User authenticated successfully, take appropriate action
                     DispatchQueue.main.async {
+                        
+                        sleep(4)
+
+                        self.document?.date = Date()
+                        self.document?.isSigned = true
                         self.navigationController?.popViewController(animated: true)
                         
                     }

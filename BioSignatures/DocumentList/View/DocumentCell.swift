@@ -28,8 +28,9 @@ class DocumentCell: UITableViewCell {
     
     private let timeStamp: UILabel = {
         let label = UILabel()
-        label.text = "07-22-2018 1:20 PM"
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.textColor = UIColor(rgb: 0x0288D1)
+        
         return label
     }()
     
@@ -50,6 +51,12 @@ class DocumentCell: UITableViewCell {
         didSet {
             self.documentTitle.text = document?.title
             self.assignedTo.text = document?.assignedTo
+            if document!.isSigned {
+                checkMarkImageView.isHidden = false
+                timeStamp.text = "Digitally signed \(document!.date!.toString())"
+            } else {
+                checkMarkImageView.isHidden = true
+            }
         }
     }
     
@@ -126,13 +133,10 @@ class DocumentCell: UITableViewCell {
 
 extension Date {
     
-    func toString(withFormat format: String) -> String {
+    func toString() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = format
-        let myString = formatter.string(from: self)
-        let yourDate = formatter.date(from: myString)
-        formatter.dateFormat = format
+        formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         
-        return formatter.string(from: yourDate!)
+        return formatter.string(from: self)
     }
 }

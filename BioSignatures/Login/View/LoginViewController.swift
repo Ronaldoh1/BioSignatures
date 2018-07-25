@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
         textfield.placeholder = "Password"
         textfield.returnKeyType = .done
         textfield.delegate = self
+        textfield.isSecureTextEntry = true
         return textfield
     }()
     
@@ -68,12 +69,14 @@ class LoginViewController: UIViewController {
     
     private lazy var checkmark1: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Checkmark"))
+        imageView.contentMode = .scaleAspectFit
         imageView.isHidden = true
         return imageView
     }()
     
     private lazy var checkmark2: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Checkmark"))
+        imageView.contentMode = .scaleAspectFit
         imageView.isHidden = true
         return imageView
     }()
@@ -88,12 +91,6 @@ class LoginViewController: UIViewController {
     }()
     
     private let divider1: UIView = {
-        let view = UIView()
-        view.backgroundColor = .black
-        return view
-    }()
-    
-    private let divider2: UIView = {
         let view = UIView()
         view.backgroundColor = .black
         return view
@@ -158,7 +155,6 @@ class LoginViewController: UIViewController {
         view.addSubview(divider1)
         view.addSubview(checkmark1)
         view.addSubview(checkmark2)
-        view.addSubview(divider2)
         view.addSubview(createAccountButton)
         view.addSubview(addSignatureButton)
     }
@@ -206,8 +202,9 @@ class LoginViewController: UIViewController {
             make.left.equalTo(emailTextField.snp.left)
             make.right.equalTo(emailTextField.snp.right)
             make.height.equalTo(44)
-            make.top.equalTo(divider2.snp.bottom).offset(10)
+            make.top.equalTo(divider1.snp.bottom).offset(85)
         }
+        
         signatureImageView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
             make.top.equalTo(checkmark1.snp.bottom).offset(20)
@@ -222,15 +219,8 @@ class LoginViewController: UIViewController {
             make.height.equalTo(0.5)
         }
         
-        divider2.snp.makeConstraints { (make) in
-            make.left.equalTo(emailTextField.snp.left)
-            make.right.equalTo(emailTextField.snp.right)
-            make.top.equalTo(signatureImageView.snp.bottom).offset(10)
-            make.height.equalTo(0.5)
-        }
-        
         createAccountButton.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-67)
             make.height.equalTo(44)
             make.left.equalToSuperview().offset(16)
             make.right.equalTo(-16)

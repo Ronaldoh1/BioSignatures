@@ -29,6 +29,12 @@ class DocumentListViewController: UIViewController {
         setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     private func setupViews() {
         self.navigationItem.title = "Documents to Approve"
         view.addSubview(tableView)
