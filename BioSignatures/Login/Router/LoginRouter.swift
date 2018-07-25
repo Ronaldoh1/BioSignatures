@@ -35,4 +35,8 @@ extension LoginRouter: LoginRouterType {
         router.presentSignatureViewController(sender: sender)
     }
     
+    func presentDocumentListViewController(sender: UIViewController) {
+        guard let router = container.resolve(DocumentListRouterType.self) as? DocumentListRouter else { return }
+        router.presentDocumentListViewController(sender: sender)
+    }
 }

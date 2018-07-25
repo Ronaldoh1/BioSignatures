@@ -19,16 +19,18 @@ protocol DocumentListInteractorType: class {
     
 }
 
-protocol DocumentListPresenterType: class {
+protocol DocumentListPresenterType: UITableViewDataSource {
     
     func viewDidAppear()
-    func signUp(email: String, password: String)
     
+    func didSelectItem(at indexPath: IndexPath)
     
 }
 
 protocol DocumentListRouterType: class {
     
     func presentDocumentListViewController(sender: UIViewController)
+    
+    func presentDocumentDetailsViewController(sender: UIViewController, document: Document)
     
 }

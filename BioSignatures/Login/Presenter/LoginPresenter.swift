@@ -28,8 +28,8 @@ extension LoginPresenter: LoginPresenterType {
         
     }
     
-    func signUp(email: String, password: String) {
-        
+    func signUp() {
+        router?.presentDocumentListViewController(sender: view as! LoginViewController)
     }
     
     func presentSignatureViewController() {

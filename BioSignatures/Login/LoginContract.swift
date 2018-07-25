@@ -23,10 +23,9 @@ protocol LoginInteractorType: class {
 protocol LoginPresenterType: class {
     
     func viewDidAppear()
-    func signUp(email: String, password: String)
+    func signUp()
     func presentSignatureViewController()
 
-    
     
 }
 
@@ -35,5 +34,7 @@ protocol LoginRouterType: class {
     func presentLoginViewController(in window: UIWindow)
     
     func presentSignatureViewController(sender: UIViewController)
+    
+    func presentDocumentListViewController(sender: UIViewController)
     
 }
