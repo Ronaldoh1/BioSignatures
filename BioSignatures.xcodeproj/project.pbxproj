@@ -10,6 +10,10 @@
 		0E6D91C22106650A005A7E10 /* MCErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */; };
 		0E6D91C82106CC9F005A7E10 /* ApproveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C72106CC9F005A7E10 /* ApproveTableViewCell.swift */; };
 		0E6D91CA2106CCAF005A7E10 /* SignatureCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D91C92106CCAF005A7E10 /* SignatureCellTableViewCell.swift */; };
+		FA2C5A27210CA47F007F067A /* BiometericsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C5A26210CA47F007F067A /* BiometericsManager.swift */; };
+		FA2C5A29210CA6D3007F067A /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C5A28210CA6D3007F067A /* AuthenticationError.swift */; };
+		FA2C5A2D210CAFA9007F067A /* Biometry.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA2C5A2C210CAFA9007F067A /* Biometry.strings */; };
+		FACD13CD210EBDA7000476FC /* Biometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD13CC210EBDA7000476FC /* Biometry.swift */; };
 		FADA89AF21066B1F00EF63DD /* DocumentDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */; };
 		FADA89B12106F39B00EF63DD /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADA89B02106F39B00EF63DD /* LocalAuthentication.framework */; };
 		FADA89B32106FB8100EF63DD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA89B22106FB8100EF63DD /* Document.swift */; };
@@ -71,6 +75,10 @@
 		0E6D91C12106650A005A7E10 /* MCErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCErrorTextField.swift; sourceTree = "<group>"; };
 		0E6D91C72106CC9F005A7E10 /* ApproveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTableViewCell.swift; sourceTree = "<group>"; };
 		0E6D91C92106CCAF005A7E10 /* SignatureCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureCellTableViewCell.swift; sourceTree = "<group>"; };
+		FA2C5A26210CA47F007F067A /* BiometericsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometericsManager.swift; sourceTree = "<group>"; };
+		FA2C5A28210CA6D3007F067A /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		FA2C5A2C210CAFA9007F067A /* Biometry.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Biometry.strings; sourceTree = "<group>"; };
+		FACD13CC210EBDA7000476FC /* Biometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biometry.swift; sourceTree = "<group>"; };
 		FADA89AE21066B1F00EF63DD /* DocumentDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsInteractor.swift; sourceTree = "<group>"; };
 		FADA89B02106F39B00EF63DD /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		FADA89B22106FB8100EF63DD /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -147,6 +155,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA2C5A23210CA26F007F067A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C5A26210CA47F007F067A /* BiometericsManager.swift */,
+				FA2C5A28210CA6D3007F067A /* AuthenticationError.swift */,
+				FACD13CC210EBDA7000476FC /* Biometry.swift */,
+				FA2C5A2C210CAFA9007F067A /* Biometry.strings */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		FADA89AD21066AE100EF63DD /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +231,7 @@
 		FAEE191621062D86001F1F32 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				FA2C5A23210CA26F007F067A /* Common */,
 				FAEE193021063248001F1F32 /* Assembly */,
 				FAEE1929210630CA001F1F32 /* Contract */,
 				FAEE1928210630C5001F1F32 /* Entity */,
@@ -604,6 +624,7 @@
 				FAEE18F321061639001F1F32 /* LaunchScreen.storyboard in Resources */,
 				FAEE192021062F2E001F1F32 /* D913ADFB-E83A-3DE1-B44B-3BBCD0DE3EB3.bcsymbolmap in Resources */,
 				FAEE18F021061639001F1F32 /* Assets.xcassets in Resources */,
+				FA2C5A2D210CAFA9007F067A /* Biometry.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,10 +684,12 @@
 				FAEE195F210647A2001F1F32 /* DocumentListAssembly.swift in Sources */,
 				FAEE196C21064B10001F1F32 /* YPDrawSignatureView.swift in Sources */,
 				FAEE195721064769001F1F32 /* DocumentListViewController.swift in Sources */,
+				FA2C5A27210CA47F007F067A /* BiometericsManager.swift in Sources */,
 				FAEE196E21064C6D001F1F32 /* SignatureViewController.swift in Sources */,
 				FAEE195321064729001F1F32 /* SignatureInteractor.swift in Sources */,
 				FAEE193621063363001F1F32 /* LoginInteractor.swift in Sources */,
 				FAEE193221063256001F1F32 /* LoginAssembly.swift in Sources */,
+				FACD13CD210EBDA7000476FC /* Biometry.swift in Sources */,
 				FADA89AF21066B1F00EF63DD /* DocumentDetailsInteractor.swift in Sources */,
 				FAEE192F210631B2001F1F32 /* LoginContract.swift in Sources */,
 				0E6D91C22106650A005A7E10 /* MCErrorTextField.swift in Sources */,
@@ -678,6 +701,7 @@
 				FAEE196A21064834001F1F32 /* DocumentDetailsAssembly.swift in Sources */,
 				FAEE1963210647EB001F1F32 /* DocumentDetailsRouter.swift in Sources */,
 				FAEE195B21064783001F1F32 /* DocumentListInteractor.swift in Sources */,
+				FA2C5A29210CA6D3007F067A /* AuthenticationError.swift in Sources */,
 				FAEE192D210630FA001F1F32 /* LoginRouter.swift in Sources */,
 				FAEE195921064774001F1F32 /* DocumentListRouter.swift in Sources */,
 				FADA89B52107016C00EF63DD /* DocumentCell.swift in Sources */,
@@ -930,6 +954,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VJT9264H8;
 				INFOPLIST_FILE = BioSignaturesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -949,6 +974,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VJT9264H8;
 				INFOPLIST_FILE = BioSignaturesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

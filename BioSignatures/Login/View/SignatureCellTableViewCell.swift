@@ -10,8 +10,6 @@ import UIKit
 
 class SignatureCellTableViewCell: UITableViewCell {
     
-    
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -108,6 +108,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        
+        BiometricsAuthenticator.shared.authenticateWithBioMetrics(success: {
+            print("Call network")
+        }) { (error) in
+            print(error.message)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -239,7 +245,10 @@ class LoginViewController: UIViewController {
     @objc private func createAccount() {
         
         if imageCache.object(forKey: "signature") != nil && toggle.isOn {
-            authenticateWithBioMetrics()
+            //Authenticator.shared.email = "ronaldoh1@gmail.com"
+          //  print(Authenticator.shared.storedEmail)
+
+           authenticateWithBioMetrics()
         }
         
     }
